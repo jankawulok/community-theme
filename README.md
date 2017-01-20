@@ -204,17 +204,7 @@ but it has been replaced with **Bourbon**, which provided a significant performa
 
 ## Contributing
 
-Contributions are welcome! Your changes should be in agreement with the theme guidelines and goals described above.
-Before you make your pull request, we recommend that you join our [gitter room](https://gitter.im/PrestaShop/community-theme-16)
-to discuss it.
-
-If you want to make a pull request, we ask that you keep to the same contribution rules as described
-in [PrestaShop/PrestaShop](https://github.com/PrestaShop/PrestaShop/blob/develop/CONTRIBUTING.md).
-
-We would like to emphasize the commit message norm:
-[How to write a commit message](http://doc.prestashop.com/display/PS16/How+to+write+a+commit+message).
-Because this is a theme, you may omit the `type` in your commit message
-or write your own, more descriptive type: e.g `SEO`, `JS`, etc.
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
