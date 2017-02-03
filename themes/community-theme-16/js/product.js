@@ -150,6 +150,27 @@ $(function() {
   }
 });
 
+var openPhotoSwipe = function(e,new_index) {
+
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    
+    // define options (if needed)
+    var options = {
+      // optionName: 'option value'
+      // for example:
+      focus: false,
+      history: false,
+      closeOnScroll: false,
+      showAnimationDuration: 0,
+      hideAnimationDuration: 0,
+      index: 0 // start at first slide
+  };
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+    if(e) e.preventDefault();
+};
+
 function initProductImages() {
   var $thumbList = $('#thumbs_list_frame');
 
@@ -168,25 +189,13 @@ function initProductImages() {
   }
 
   // Init zoom on load
-  initZoom(
-    $('#bigpic').attr('src').replace('large', 'thickbox')
-  );
+
 }
 
-function initZoom(src) {
-  if (typeof(jqZoomEnabled) != 'undefined' && jqZoomEnabled) {
-    var touchDevice = isTouchDevice() || $(window).width() < 768;
-    $('#image-block').zoom({
-      on: touchDevice ? 'click' : 'mouseover',
-      url: src
-      // @see http://www.jacklmoore.com/zoom/
-    });
-  }
-}
 
 // Update display of the large image
 function displayImage($thumbAnchor) {
-
+  console.log($thumbAnchor);
   var imgSrcThickBox = $thumbAnchor.attr('href');
   var imgSrcLarge = imgSrcThickBox.replace('thickbox', 'large');
   var imgTitle = $thumbAnchor.attr('title');
@@ -204,7 +213,7 @@ function displayImage($thumbAnchor) {
 
   // There is no API to change zoom src, need to reinit
   $('#image-block').trigger('zoom.destroy');
-  initZoom(imgSrcThickBox);
+
 
   $('#views_block').find('li a').removeClass('shown');
   $thumbAnchor.addClass('shown');
@@ -233,13 +242,10 @@ function refreshProductImages(id_product_attribute) {
     }
   }
 }
-
-if (typeof(jqZoomEnabled) != 'undefined' && jqZoomEnabled) {
-  $(document).on('click', '#views_block li a', function(e) {
+$(document).on('click', '#views_block li a', function(e) {
     e.preventDefault();
-    displayImage($(this));
+    openPhotoSwipe();
   });
-}
 
 // On hovering thumbnails, display new main image
 $(document).on('mouseover', '#views_block li a', function() {
@@ -247,8 +253,9 @@ $(document).on('mouseover', '#views_block li a', function() {
 });
 
 // On clicking
-$(document).on('click', '#view_full_size, #image-block', function() {
-  $('#views_block').find('.shown').trigger('click');
+$(document).on('click', '#view_full_size, #image-block', function(e) {
+  e.preventDefault();
+    openPhotoSwipe();
 });
 
 function initAccessories() {

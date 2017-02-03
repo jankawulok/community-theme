@@ -2,12 +2,14 @@ $bc-dropdown-border: $input-border;
 
 #blockcart-dropdown {
   position: absolute;
+  right: 0;
+  top: 100%;
   z-index: 4;
   background: #fff;
-  width: 100%;
+  width: 350px;
   border: 1px solid $bc-dropdown-border;
   border-top: none;
-  padding: 10px;
+  padding: 0;
 
   dl {
     margin-bottom: 10px;
@@ -16,9 +18,13 @@ $bc-dropdown-border: $input-border;
   dt {
     font-weight: normal;
     margin-bottom: 10px;
+    margin-bottom: 10px;
     position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $bc-dropdown-border;
     &:last-of-type {
       margin-bottom: 0;
+      border-bottom: none;
     }
   }
 
@@ -53,14 +59,17 @@ $bc-dropdown-border: $input-border;
 .cart_block_list {
   .remove_link {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 4px;
+    top: 4px;
   }
 }
 
 .cart-images {
   float: left;
   margin-right: 5px;
+  > img {
+    width: 70px;
+  }
 }
 
 .cart-info {

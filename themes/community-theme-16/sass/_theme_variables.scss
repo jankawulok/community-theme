@@ -33,6 +33,11 @@ $font-size-h4: ceil(($font-size-base * 1.4));  // ~20px (default: 18px)
 $font-size-h5: ceil(($font-size-base * 1.2));  // ~17px (default: 14px)
 $font-size-h6: $font-size-base;                // ~14px (default: 12px)
 
+
+// navbar
+
+$navbar-height: 41px;
+
 // @TODO Overwrite theses variables to customize the colors of Bootstrap:
 
 // @see themes/community-theme-16/sass/vendor/bootstrap/bootstrap/_variables.scss

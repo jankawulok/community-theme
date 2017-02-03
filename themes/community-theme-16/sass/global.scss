@@ -10,6 +10,12 @@
 // Vendor styles
 @import "vendor/bootstrap";
 @import "vendor/font-awesome";
+@import "vendor/photoswipe";
+
+// Custom grid sizes
+@import "partials/grid";
+@import "bootswatch";
+@import "variables";
 
 // Vendor style overrides + new components
 @import "partials/alerts";
