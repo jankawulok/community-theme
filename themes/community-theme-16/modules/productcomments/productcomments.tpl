@@ -1,4 +1,4 @@
-<div id="product_comments_block_tab">
+<div id="product_comments_block_tab" class="page-product-box tab-pane fade in">
   {if !empty($comments)}
 
     {foreach from=$comments item=comment}

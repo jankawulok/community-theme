@@ -110,6 +110,11 @@ var thumbSlider = false;
 // DOM Ready
 $(function() {
 
+  //init popovers
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
+
   var url_found = checkUrl();
 
   // init the price in relation of the selected attributes

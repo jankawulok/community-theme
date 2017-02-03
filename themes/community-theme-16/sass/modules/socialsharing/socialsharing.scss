@@ -1,7 +1,10 @@
 
 @import "./../../theme_variables";
 @import "./../../vendor_variables";
-
+.socialsharing_product_label {
+  display: inline-block;
+  margin-right: 0.66em;
+}
 .btn-facebook {
   color: #fff;
   background-color: #435f9f;

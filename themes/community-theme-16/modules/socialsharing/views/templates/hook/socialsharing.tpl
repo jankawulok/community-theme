@@ -1,5 +1,6 @@
 {if $PS_SC_TWITTER || $PS_SC_FACEBOOK || $PS_SC_GOOGLE || $PS_SC_PINTEREST}
 	<p class="socialsharing_product hidden-print">
+		<div class="socialsharing_product_label">{l s="Share with friends" mod='socialsharing'}</div>
 		{if $PS_SC_TWITTER}
 			<button data-type="twitter" type="button" class="btn btn-xs btn-twitter">
 				<i class="icon-twitter"></i> {l s="Tweet" mod='socialsharing'}
