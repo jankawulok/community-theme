@@ -17,7 +17,7 @@
                   <span class="quantity">{$product.cart_quantity}</span> &times;
                 </span>
                 <a class="cart_block_product_name" href="{$link->getProductLink($product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute)|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}">
-                  {$product.name|truncate:13:'...'|escape:'html':'UTF-8'}
+                  {$product.name|truncate:30:'...'|escape:'html':'UTF-8'}
                 </a>
               </div>
               {if isset($product.attributes_small)}

@@ -27,6 +27,7 @@
 index.php
 .sass-cache/
 *.css.map
+.DS_Store
 
 /themes/community-theme-16/.sass-cache/
 /themes/community-theme-16/cache/*

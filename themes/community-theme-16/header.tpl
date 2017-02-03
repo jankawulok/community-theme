@@ -55,15 +55,15 @@
 
 <header id="header">
 
-  {capture name='displayBanner'}{hook h='displayBanner'}{/capture}
+{*   {capture name='displayBanner'}{hook h='displayBanner'}{/capture}
   {if $smarty.capture.displayBanner}
     <div id="header-banners">
       {$smarty.capture.displayBanner}
     </div>
-  {/if}
+  {/if} *}
 
   <nav class="navbar navbar-inverse">
-    <div class="container">
+    <div class="">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar" aria-expanded="false">
           <span class="sr-only">{l s='Toggle navigation'}</span>
@@ -71,7 +71,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}">{$PS_SHOP_NAME|escape:'html':'UTF-8'}</a>
+        {* <a class="navbar-brand" href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}">{$PS_SHOP_NAME|escape:'html':'UTF-8'}</a> *}
       </div>
 
       <div class="collapse navbar-collapse" id="header-navbar">
